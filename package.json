@@ -13,7 +13,7 @@
   "scripts": {
     "redis-cli": "docker exec -it redistimeseries redis-cli",
     "start": "docker-compose up",
-    "start:app": "node grafana-plugin-stats.ts",
+    "start:app": "node src/grafana-plugin-stats.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"
