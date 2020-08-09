@@ -17,7 +17,7 @@ Please read full LinkedIn Article "[How many times Redis Datasource for Grafana 
 ## Requirements
 
 - [Docker](https://docker.com) to start Redis and Grafana.
-- [Node.js](https://nodejs.org) to run `src/grafana-plugin-stats.ts` the script.
+- [Node.js](https://nodejs.org) to run `src/grafana-plugin-stats.ts` script.
 
 ## Datasource configuration
 
