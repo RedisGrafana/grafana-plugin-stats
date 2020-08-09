@@ -8,13 +8,11 @@
 
 </div>
 
-## Description
+![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource-stats.png)
 
 [Redis Datasource](https://github.com/RedisTimeSeries/grafana-redis-datasource) for Grafana was published 10 days ago and I want to see how many times it was downloaded over time. Unfortunately, the Grafana plugin repository does not provide such statistics out of the box.
 
-![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource-stats.png)
-
-Please read LinkedIn Article "[How many times Redis Datasource for Grafana was downloaded?](https://www.linkedin.com/pulse/how-many-times-redis-datasource-grafana-downloaded-mikhail-volkov)"
+Please read full LinkedIn Article "[How many times Redis Datasource for Grafana was downloaded?](https://www.linkedin.com/pulse/how-many-times-redis-datasource-grafana-downloaded-mikhail-volkov)" to learn more about the project.
 
 ## Requirements
 
