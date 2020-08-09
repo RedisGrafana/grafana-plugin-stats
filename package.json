@@ -1,0 +1,20 @@
+{
+  "author": "Mikhail Volkov",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "ioredis": "^4.17.3"
+  },
+  "description": "Get statistics for Grafana Plugin",
+  "devDependencies": {
+    "@types/node": "^14.0.27"
+  },
+  "license": "ISC",
+  "name": "grafana-plugin-stats",
+  "scripts": {
+    "redis-cli": "docker exec -it redistimeseries redis-cli",
+    "start": "docker-compose up",
+    "start:app": "node grafana-plugin-stats.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
