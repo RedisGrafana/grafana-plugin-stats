@@ -17,8 +17,14 @@ Please read full LinkedIn Article "[How many times Redis Datasource for Grafana 
 ## Requirements
 
 - [Docker](https://docker.com) to start Redis and Grafana.
-- [Node.js](https://nodejs.org) to run `src/grafana-plugin-stats.ts` script.
+- [Node.js](https://nodejs.org) to run scripts.
 
 ## Datasource configuration
 
 ![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource.png)
+
+## Grafana Plugins statistics
+
+Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins in [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) which displayed on Global dashboard.
+
+![Grafana Plugins](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/grafana-plugins.png)

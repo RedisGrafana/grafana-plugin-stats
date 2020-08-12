@@ -6,8 +6,8 @@ services:
     image: redislabs/redistimeseries:latest
     ports:
       - 6379:6379
-    volumes:
-      - ./dump.rdb:/data/dump.rdb
+    #volumes:
+    #  - ./dump.rdb:/data/dump.rdb
 
   grafana:
     container_name: grafana
