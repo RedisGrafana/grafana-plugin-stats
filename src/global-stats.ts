@@ -25,6 +25,7 @@ const redis = new Redis("redis://localhost:6379");
  */
 async function savePlugin(plugin) {
   const downloadKey = `download:${plugin.slug}`;
+  const popularKey = `popular:${plugin.slug}`;
   const diffKey = `diff:${plugin.slug}`;
 
   /**
@@ -46,6 +47,27 @@ async function savePlugin(plugin) {
       "LABELS",
       "value",
       "download",
+      "type",
+      plugin.typeCode,
+      "plugin",
+      plugin.slug,
+      "version",
+      plugin.version
+    )
+    .catch((err) => console.log(err));
+
+  /**
+   * Add Time-series popularity sample with plugin and version labels
+   */
+  await redis
+    .send_command(
+      "TS.ADD",
+      popularKey,
+      "*",
+      plugin.popularity,
+      "LABELS",
+      "value",
+      "popular",
       "type",
       plugin.typeCode,
       "plugin",
