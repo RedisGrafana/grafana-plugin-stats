@@ -4,7 +4,7 @@
 
 [![Grafana 7](https://img.shields.io/badge/Grafana-7-blue)](https://www.grafana.com)
 [![RedisTimeSeries](https://img.shields.io/badge/RedisTimeSeries-inspired-yellowgreen)](https://oss.redislabs.com/redistimeseries/)
-[![Grafana-Redis-Datasource](https://img.shields.io/badge/GrafanaRedisDatasource-integrated-yellow)](https://github.com/RedisTimeSeries/grafana-redis-datasource)
+[![Grafana-Redis-Datasource](https://img.shields.io/badge/GrafanaRedisDatasource-powered-red)](https://github.com/RedisTimeSeries/grafana-redis-datasource)
 
 </div>
 
