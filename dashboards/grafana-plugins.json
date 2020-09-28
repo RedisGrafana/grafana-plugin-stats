@@ -70,7 +70,7 @@
         "max": false,
         "min": false,
         "rightSide": false,
-        "show": true,
+        "show": false,
         "sideWidth": null,
         "sort": "current",
         "sortDesc": true,
@@ -97,7 +97,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "plugin"
         }
       ],
       "thresholds": [],
@@ -197,7 +197,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "plugin"
         }
       ],
       "thresholds": [],
@@ -313,7 +313,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "null"
         }
       ],
       "thresholds": [],
@@ -413,7 +413,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "null"
         }
       ],
       "thresholds": [],
@@ -528,7 +528,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "null"
         }
       ],
       "thresholds": [],
@@ -627,7 +627,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "null"
         }
       ],
       "thresholds": [],
@@ -742,7 +742,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "null"
         }
       ],
       "thresholds": [],
@@ -841,7 +841,7 @@
           "query": "",
           "refId": "A",
           "type": "timeSeries",
-          "value": "version"
+          "value": "null"
         }
       ],
       "thresholds": [],
@@ -894,7 +894,7 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-30d",
     "to": "now"
   },
   "timepicker": {
@@ -903,5 +903,5 @@
   "timezone": "",
   "title": "Grafana Plugins",
   "uid": "1iKRLJIGz",
-  "version": 26
+  "version": 29
 }
