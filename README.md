@@ -32,6 +32,6 @@ If you’re not familiar with Grafana, it’s a very popular tool used to build 
 
 # Grafana Plugins statistics
 
-Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/). Dashboards to display the day are in `Dashboard/` folder.
+Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/). To display the collected data use Dashboards in `Dashboard/` folder.
 
 ![Grafana Plugins](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/grafana-plugins.png)
