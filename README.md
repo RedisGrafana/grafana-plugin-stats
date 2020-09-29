@@ -12,25 +12,25 @@ Earlier this month, Redis Labs released the new [Redis Data Source](https://graf
 
 ![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource-stats.png)
 
-# What is the Redis Data Source for Grafana?
+## What is the Redis Data Source for Grafana?
 
 If you’re not familiar with Grafana, it’s a very popular tool used to build dashboards to monitor applications, infrastructures, and software components. The Redis Data Source for Grafana is a plug-in that allows users to connect to the Redis database and build dashboards in Grafana to easily monitor Redis data. It provides an out-of-the-box predefined dashboard, but also lets you build customized dashboards tuned to your specific needs.
 
-# Learn more
+## Learn more
 
 - Redis Labs blog post "[How to Use the New Redis Data Source for Grafana Plug-in](https://redislabs.com/blog/how-to-use-the-new-redis-data-source-for-grafana-plug-in/)"
 - LinkedIn Article "[How many times Redis Data Source for Grafana was downloaded?](https://www.linkedin.com/pulse/how-many-times-redis-datasource-grafana-downloaded-mikhail-volkov)".
 
-# Requirements
+## Requirements
 
 - [Docker](https://docker.com) to start Redis and Grafana.
 - [Node.js](https://nodejs.org) to run scripts.
 
-# Data Source configuration
+## Data Source configuration
 
 ![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource.png)
 
-# Grafana Plugins statistics
+## Grafana Plugins statistics
 
 Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/). To display the collected data use Dashboards in `dashboards/` folder.
 
