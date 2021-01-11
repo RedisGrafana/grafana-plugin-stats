@@ -1,16 +1,13 @@
 <h1 align="center">How many times Redis Data Source for Grafana was downloaded?</h1>
 
-<div id="badges" align="center">
+![Stats](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-datasource-stats.png)
 
-[![Grafana 7](https://img.shields.io/badge/Grafana-7-blue)](https://www.grafana.com)
-[![RedisTimeSeries](https://img.shields.io/badge/RedisTimeSeries-inspired-yellowgreen)](https://oss.redislabs.com/redistimeseries/)
-[![Grafana-Redis-Datasource](https://img.shields.io/badge/GrafanaRedisDatasource-powered-red)](https://github.com/RedisTimeSeries/grafana-redis-datasource)
-
-</div>
+[![Grafana 7](https://img.shields.io/badge/Grafana-7-orange)](https://www.grafana.com)
+[![Redis Data Source](https://img.shields.io/badge/dynamic/json?color=blue&label=Redis%20Data%20Source&query=%24.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-datasource)](https://grafana.com/grafana/plugins/redis-datasource)
+[![Redis Application plug-in](https://img.shields.io/badge/dynamic/json?color=blue&label=Redis%20Application%20plug-in&query=%24.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-app)](https://grafana.com/grafana/plugins/redis-app)
+[![Downloaded](https://img.shields.io/badge/dynamic/json?color=blue&label=Redis%20Data%20Source&query=%24.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-datasource)](https://grafana.com/grafana/plugins/redis-datasource)
 
 Earlier this month, Redis Labs released the new [Redis Data Source](https://grafana.com/grafana/plugins/redis-datasource) for Grafana plug-in, which connects the widely used open source application monitoring tool to Redis. To give you an idea of how it all works, let’s take a look at a self-referential example: using the plug-in to see how many times it has been downloaded over time. (The Grafana plug-in repository itself does not provide such statistics out of the box.)
-
-![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource-stats.png)
 
 ## What is the Redis Data Source for Grafana?
 
@@ -28,10 +25,10 @@ If you’re not familiar with Grafana, it’s a very popular tool used to build 
 
 ## Data Source configuration
 
-![Stats](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/redis-datasource.png)
+![Data Source](https://raw.githubusercontent.com/RedisGrafana/grafana-redis-datasource/master/src/img/datasource.png)
 
 ## Grafana Plugins statistics
 
-Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/). To display the collected data use Dashboards in `dashboards/` folder.
+Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/). To display the collected data use dashboard `dashboards/grafana-plugins.json`.
 
-![Grafana Plugins](https://github.com/mikhailredis/grafana-plugin-stats/blob/master/images/grafana-plugins.png)
+![Grafana Plugins](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/grafana-plugins.png)
