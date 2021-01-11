@@ -1,4 +1,34 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_REDIS",
+      "label": "Redis",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "redis-datasource",
+      "pluginName": "Redis"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "7.3.6"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "redis-datasource",
+      "name": "Redis",
+      "version": "1.3.0"
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -15,15 +45,8 @@
   "editable": false,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
-  "links": [
-    {
-      "asDropdown": false,
-      "icon": "external link",
-      "tags": [],
-      "type": "dashboards"
-    }
-  ],
+  "id": null,
+  "links": [],
   "panels": [
     {
       "collapsed": false,
@@ -36,7 +59,7 @@
       },
       "id": 28,
       "panels": [],
-      "title": "Redis Datasource",
+      "title": "Redis plug-ins",
       "type": "row"
     },
     {
@@ -44,7 +67,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -80,8 +103,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -104,7 +130,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Total Downloads",
+      "title": "Redis Data Source (total)",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -147,7 +173,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -171,7 +197,7 @@
         "hideZero": true,
         "max": false,
         "min": false,
-        "show": true,
+        "show": false,
         "sort": "current",
         "sortDesc": true,
         "total": false,
@@ -180,8 +206,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -204,7 +233,216 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Hourly",
+      "title": "Redis Data Source (hourly)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_REDIS}",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 31,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "sideWidth": null,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "command": "ts.mrange",
+          "filter": "value=download type=app plugin=redis-app",
+          "legend": "plugin",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries",
+          "value": "plugin"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Redis Application plug-in (total)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "transformations": [],
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_REDIS}",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 34,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "show": false,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "command": "ts.mrange",
+          "filter": "value=diff type=app plugin=redis-app",
+          "legend": "plugin",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries",
+          "value": "plugin"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Redis Application plug-in (hourly)",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -248,7 +486,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 23
       },
       "id": 4,
       "panels": [],
@@ -260,7 +498,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -273,7 +511,7 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 24
       },
       "hiddenSeries": false,
       "id": 2,
@@ -296,8 +534,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -363,7 +604,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -376,7 +617,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 24
       },
       "hiddenSeries": false,
       "id": 5,
@@ -396,8 +637,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -464,7 +708,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 40
       },
       "id": 12,
       "panels": [],
@@ -476,7 +720,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -489,7 +733,7 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 30
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 13,
@@ -511,8 +755,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -577,7 +824,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -590,7 +837,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 30
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 14,
@@ -610,8 +857,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -678,7 +928,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 46
+        "y": 57
       },
       "id": 16,
       "panels": [],
@@ -690,7 +940,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -703,7 +953,7 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 47
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 17,
@@ -725,8 +975,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -791,7 +1044,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Redis",
+      "datasource": "${DS_REDIS}",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -804,7 +1057,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 47
+        "y": 58
       },
       "hiddenSeries": false,
       "id": 18,
@@ -824,8 +1077,11 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -894,7 +1150,7 @@
     "list": []
   },
   "time": {
-    "from": "now-30d",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {
@@ -903,5 +1159,5 @@
   "timezone": "",
   "title": "Grafana Plugins",
   "uid": "1iKRLJIGz",
-  "version": 29
+  "version": 16
 }
