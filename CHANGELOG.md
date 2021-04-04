@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.0 (2021-04-03)
+
+### Features / Enhancements
+
+- Based on Grafana 7.5.1
+- Installing Redis Application plug-in with Auto provisioning
+- Dashboard exported as Global to support Auto provisioning
+- Plugin statistics updated to Apr, 3 2021
+
 ## 1.2.0 (2021-03-24)
 
 ### Features / Enhancements
