@@ -1,4 +1,4 @@
-<h1 align="center">How many times Redis Data Source for Grafana was downloaded?</h1>
+<h1 align="center">How many times Redis plug-ins for Grafana were downloaded?</h1>
 
 ![Stats](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-datasource-stats.png)
 
@@ -6,28 +6,38 @@
 [![Redis Data Source](https://img.shields.io/badge/dynamic/json?color=blue&label=Redis%20Data%20Source&query=%24.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-datasource)](https://grafana.com/grafana/plugins/redis-datasource)
 [![Downloaded](https://img.shields.io/badge/dynamic/json?color=blue&label=Downloads&query=%24.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-datasource)](https://grafana.com/grafana/plugins/redis-datasource)
 
-Earlier this month, Redis Labs released the new [Redis Data Source](https://grafana.com/grafana/plugins/redis-datasource) for Grafana plug-in, which connects the widely used open source application monitoring tool to Redis. To give you an idea of how it all works, let’s take a look at a self-referential example: using the plug-in to see how many times it has been downloaded over time. (The Grafana plug-in repository itself does not provide such statistics out of the box.)
+## Introduction
 
-## What is the Redis Data Source for Grafana?
+The Redis plug-ins for Grafana allow users to connect to the Redis databases and build dashboards in Grafana to observe and interact with Redis and Application data.
 
-The Redis Data Source for Grafana is a plug-in that allows users to connect to the Redis database and build dashboards in Grafana to easily monitor Redis data. It provides an out-of-the-box predefined dashboard, but also lets you build customized dashboards tuned to your specific needs.
+![Diagram](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-grafana-stats.png)
 
-## Learn more
-
-- Redis Labs blog post "[How to Use the New Redis Data Source for Grafana Plug-in](https://redislabs.com/blog/how-to-use-the-new-redis-data-source-for-grafana-plug-in/)"
-- LinkedIn Article "[How many times Redis Data Source for Grafana was downloaded?](https://www.linkedin.com/pulse/how-many-times-redis-datasource-grafana-downloaded-mikhail-volkov)".
+Read the full story on Redis Labs blog [How to Use the New Redis Data Source for Grafana Plug-in](https://redislabs.com/blog/how-to-use-the-new-redis-data-source-for-grafana-plug-in/).
 
 ## Requirements
 
 - [Docker](https://docker.com) to start Redis and Grafana.
 - [Node.js](https://nodejs.org) to run scripts.
 
-## Data Source configuration
+## Collect statistics
 
-![Data Source](https://raw.githubusercontent.com/RedisGrafana/grafana-redis-datasource/master/src/img/datasource.png)
+Collect and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/).
 
-## Grafana Plugins statistics
+```bash
+node src/global-stats.ts
+```
 
-Script `src/global-stats.ts` can retrieve and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/). To display the collected data use dashboard `dashboards/grafana-plugins.json`.
+## Visualize data
+
+To visualize the collected data start Docker containers:
+
+```bash
+docker-compose up
+```
 
 ![Grafana Plugins](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/grafana-plugins.png)
+
+## Learn more
+
+- [Redis plug-ins for Grafana Documentation](https://redisgrafana.github.io/)
+- [Real-time observability with Redis and Grafana](https://grafana.com/go/observabilitycon/real-time-observability-with-redis-and-grafana/)

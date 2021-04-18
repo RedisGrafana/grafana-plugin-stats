@@ -14,8 +14,11 @@
     "redis-cli": "docker exec -it redistimeseries redis-cli",
     "start": "docker-compose up",
     "start:app": "node src/plugin-stats.ts",
-    "start:global": "node src/global-stats.ts",
-    "stop": "docker-compose down"
+    "start:app:global": "node src/global-stats.ts",
+    "start:master": "docker-compose -f docker-compose/master.yml up",
+    "stop": "docker-compose down",
+    "stop:master": "docker-compose -f docker-compose/master.yml down",
+    "upgrade": "yarn upgrade --latest"
   },
-  "version": "1.2.0"
+  "version": "1.4.0"
 }
