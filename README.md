@@ -1,4 +1,4 @@
-<h1 align="center">How many times Redis plug-ins for Grafana were downloaded?</h1>
+# Grafana Plug-ins Statistics
 
 ![Stats](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-datasource-stats.png)
 
@@ -8,7 +8,7 @@
 
 ## Introduction
 
-The Redis plug-ins for Grafana allow users to connect to the Redis databases and build dashboards in Grafana to observe and interact with Redis and Application data.
+This project collects plug-ins statistics from Grafana repository using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) and visualizes collected data using Redis plug-ins for Grafana.
 
 ![Diagram](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-grafana-stats.png)
 
