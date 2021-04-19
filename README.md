@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This project collects plug-ins statistics from Grafana repository using [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) and visualizes collected data using Redis plug-ins for Grafana.
+This project collects plug-ins statistics from Grafana repository as [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) and visualizes collected data using [Redis plug-ins for Grafana](https://redisgrafana.github.io/).
 
 ![Diagram](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-grafana-stats.png)
 
@@ -39,5 +39,5 @@ docker-compose up
 
 ## Learn more
 
-- [Redis plug-ins for Grafana Documentation](https://redisgrafana.github.io/)
+- Redis plug-ins for Grafana [Documentation](https://redisgrafana.github.io/)
 - [Real-time observability with Redis and Grafana](https://grafana.com/go/observabilitycon/real-time-observability-with-redis-and-grafana/)
