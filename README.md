@@ -50,4 +50,4 @@ docker-compose up
 
 ## License
 
-- Apache License Version 2.0, see [LICENSE](https://github.com/RedisGrafana/grafana-plugin-stats/blob/main/LICENSE).
+- Apache License Version 2.0, see [LICENSE](https://github.com/RedisGrafana/grafana-plugin-stats/blob/master/LICENSE).
