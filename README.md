@@ -41,3 +41,13 @@ docker-compose up
 
 - Redis plug-ins for Grafana [Documentation](https://redisgrafana.github.io/)
 - [Real-time observability with Redis and Grafana](https://grafana.com/go/observabilitycon/real-time-observability-with-redis-and-grafana/)
+
+## Contributing
+
+- Fork the repository.
+- Find an issue to work on and submit a pull request.
+- Could not find an issue? Look for documentation, bugs, typos, and missing features.
+
+## License
+
+- Apache License Version 2.0, see [LICENSE](https://github.com/RedisGrafana/grafana-plugin-stats/blob/main/LICENSE).
