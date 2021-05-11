@@ -1,12 +1,12 @@
 # Change Log
 
-## 1.4.0 (IN PROGRESS)
+## 1.4.0 (2021-05-11)
 
 ### Features / Enhancements
 
 - Based on Grafana 7.5.4
 - Docker use Redis-Prophet and Redis-App images
-- Plugins statistics updated to Apr, 17 2021
+- Plugins statistics updated to May, 11 2021
 
 ## 1.3.0 (2021-04-03)
 
