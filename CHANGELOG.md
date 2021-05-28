@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.5.0 (IN PROGRESS)
+
+### Features / Enhancements
+
+- Added new dashboard with Redis Explorer panels for Grafana v8
+- Plugins statistics updated to May, 28 2021
+- Update README with screenshots
+
 ## 1.4.0 (2021-05-11)
 
 ### Features / Enhancements
