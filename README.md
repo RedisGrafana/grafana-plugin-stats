@@ -1,4 +1,4 @@
-# Collecting Grafana Plugins Statistics as RedisTimeSeries and visualizing time-series using Redis plug-ins for Grafana
+# Collecting Grafana Plugins Statistics as RedisTimeSeries and visualizing time-series using Redis plugins for Grafana
 
 ![Stats](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-datasource-stats.png)
 
@@ -8,11 +8,11 @@
 
 ## Introduction
 
-This project collects plug-ins statistics from Grafana repository as [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) and visualizes collected data using [Redis plug-ins for Grafana](https://redisgrafana.github.io/).
+This project collects plugins statistics from Grafana repository as [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) and visualizes collected data using [Redis plugins for Grafana](https://redisgrafana.github.io/).
 
 ![Diagram](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-grafana-stats.png)
 
-Read the full story on Redis Labs blog [How to Use the New Redis Data Source for Grafana Plug-in](https://redislabs.com/blog/how-to-use-the-new-redis-data-source-for-grafana-plug-in/).
+Read the full story on Redis Labs blog [How to Use the New Redis Data Source for Grafana Plugin](https://redislabs.com/blog/how-to-use-the-new-redis-data-source-for-grafana-plug-in/).
 
 ## Requirements
 
@@ -39,7 +39,7 @@ docker-compose up
 
 ## Learn more
 
-- Redis plug-ins for Grafana [Documentation](https://redisgrafana.github.io/)
+- Redis plugins for Grafana [Documentation](https://redisgrafana.github.io/)
 - [Elevate your Redis experience with Redis plugins for Grafana](https://www.youtube.com/watch?v=LquDQyEncLE)
 - [Real-time observability with Redis and Grafana](https://grafana.com/go/observabilitycon/real-time-observability-with-redis-and-grafana/)
 

@@ -5,13 +5,13 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.5.0-20915pre"
+      "version": "8.0.4"
     },
     {
       "type": "datasource",
       "id": "redis-datasource",
       "name": "Redis",
-      "version": "1.4.0"
+      "version": "1.5.0"
     },
     {
       "type": "panel",
@@ -37,7 +37,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1622205431428,
+  "iteration": 1625590345885,
   "links": [],
   "panels": [
     {
@@ -49,9 +49,9 @@
         "x": 0,
         "y": 0
       },
-      "id": 28,
+      "id": 39,
       "panels": [],
-      "title": "Redis plug-ins",
+      "title": "Volkov Labs",
       "type": "row"
     },
     {
@@ -66,12 +66,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -121,7 +122,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -129,7 +130,7 @@
       "targets": [
         {
           "command": "ts.mrange",
-          "filter": "value=download type=datasource plugin=redis-datasource",
+          "filter": "value=download type=panel plugin=volkovlabs-image-panel",
           "legend": "plugin",
           "query": "",
           "refId": "A",
@@ -139,7 +140,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Data Source (total)",
+      "title": "Base64 Image (total)",
       "transformations": [],
       "type": "timeseries"
     },
@@ -160,7 +161,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -210,7 +212,200 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.0-20915pre",
+      "targets": [
+        {
+          "command": "ts.mrange",
+          "filter": "value=diff type=panel plugin=volkovlabs-image-panel",
+          "legend": "plugin",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries",
+          "value": "plugin"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Base64 Image (hourly)",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 28,
+      "panels": [],
+      "title": "Redis plugins",
+      "type": "row"
+    },
+    {
+      "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 0,
+        "y": 13
+      },
+      "id": 37,
+      "options": {
+        "legend": {
+          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.0-20915pre",
+      "targets": [
+        {
+          "command": "ts.mrange",
+          "filter": "value=download type=datasource plugin=redis-datasource",
+          "legend": "plugin",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries",
+          "value": "plugin"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Redis Data Source (total)",
+      "transformations": [],
+      "type": "timeseries"
+    },
+    {
+      "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "bars",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 12,
+        "y": 13
+      },
+      "id": 40,
+      "options": {
+        "legend": {
+          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -244,12 +439,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 48,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -290,7 +486,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 24
       },
       "id": 31,
       "options": {
@@ -299,7 +495,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -317,7 +513,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Application plug-in (total)",
+      "title": "Redis Application plugin (total)",
       "transformations": [],
       "type": "timeseries"
     },
@@ -338,7 +534,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -379,7 +576,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 24
       },
       "id": 34,
       "options": {
@@ -388,7 +585,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -406,7 +603,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Application plug-in (hourly)",
+      "title": "Redis Application plugin (hourly)",
       "type": "timeseries"
     },
     {
@@ -422,12 +619,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -468,7 +666,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 23
+        "y": 35
       },
       "id": 35,
       "options": {
@@ -477,7 +675,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -495,7 +693,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Explorer plug-in (total)",
+      "title": "Redis Explorer plugin (total)",
       "transformations": [],
       "type": "timeseries"
     },
@@ -516,7 +714,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -557,7 +756,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 23
+        "y": 35
       },
       "id": 36,
       "options": {
@@ -566,7 +765,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -584,7 +783,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Explorer plug-in (hourly)",
+      "title": "Redis Explorer plugin (hourly)",
       "type": "timeseries"
     },
     {
@@ -594,7 +793,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 34
+        "y": 46
       },
       "id": 4,
       "panels": [],
@@ -613,12 +812,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 52,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -658,16 +858,16 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 35
+        "y": 47
       },
       "id": 2,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -701,12 +901,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 52,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -746,16 +947,16 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 35
+        "y": 47
       },
       "id": 5,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -783,7 +984,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 51
+        "y": 63
       },
       "id": 12,
       "panels": [],
@@ -802,12 +1003,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 51,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -847,16 +1049,16 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 52
+        "y": 64
       },
       "id": 13,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -889,12 +1091,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 49,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -934,16 +1137,16 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 52
+        "y": 64
       },
       "id": 14,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -971,7 +1174,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 68
+        "y": 80
       },
       "id": 16,
       "panels": [],
@@ -990,12 +1193,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 49,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -1035,16 +1239,16 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 69
+        "y": 81
       },
       "id": 17,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -1077,12 +1281,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 52,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -1122,16 +1327,16 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 69
+        "y": 81
       },
       "id": 18,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -1154,7 +1359,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 29,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1192,5 +1397,5 @@
   "timezone": "",
   "title": "Grafana Plugins v8",
   "uid": "C1NCSr3Gk",
-  "version": 1
+  "version": 2
 }
