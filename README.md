@@ -1,4 +1,4 @@
-# Collecting Grafana Plugins Statistics as RedisTimeSeries and visualizing time-series using Redis plugins for Grafana
+# Collecting Grafana Plugins Statistics as RedisTimeSeries and visualizing time series using Redis plugins for Grafana
 
 ![Stats](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-datasource-stats.png)
 
