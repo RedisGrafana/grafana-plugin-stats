@@ -2,11 +2,11 @@
   "author": "Mikhail Volkov",
   "dependencies": {
     "axios": "^0.21.1",
-    "ioredis": "^4.27.3"
+    "ioredis": "^4.27.6"
   },
   "description": "How many times Redis Data Source for Grafana was downloaded?",
   "devDependencies": {
-    "@types/node": "^15.6.1"
+    "@types/node": "^16.0.0"
   },
   "license": "Apache-2.0",
   "name": "grafana-plugin-stats",

@@ -5,13 +5,13 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.5.0-20915pre"
+      "version": "8.0.4"
     },
     {
       "type": "datasource",
       "id": "redis-datasource",
       "name": "Redis",
-      "version": "1.4.0"
+      "version": "1.5.0"
     },
     {
       "type": "panel",
@@ -37,12 +37,16 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1622205431428,
+  "iteration": 1625587678005,
   "links": [],
   "panels": [
     {
       "collapsed": false,
       "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -51,7 +55,7 @@
       },
       "id": 28,
       "panels": [],
-      "title": "Redis plug-ins",
+      "title": "Redis plugins",
       "type": "row"
     },
     {
@@ -66,12 +70,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -121,7 +126,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -160,7 +165,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -210,7 +216,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -244,12 +250,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 48,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -299,7 +306,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -317,7 +324,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Application plug-in (total)",
+      "title": "Redis Application plugin (total)",
       "transformations": [],
       "type": "timeseries"
     },
@@ -338,7 +345,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -388,7 +396,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -406,7 +414,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Application plug-in (hourly)",
+      "title": "Redis Application plugin (hourly)",
       "type": "timeseries"
     },
     {
@@ -422,12 +430,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -477,7 +486,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -495,7 +504,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Explorer plug-in (total)",
+      "title": "Redis Explorer plugin (total)",
       "transformations": [],
       "type": "timeseries"
     },
@@ -516,7 +525,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -566,7 +576,7 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -584,12 +594,16 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Explorer plug-in (hourly)",
+      "title": "Redis Explorer plugin (hourly)",
       "type": "timeseries"
     },
     {
       "collapsed": false,
       "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -613,12 +627,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 52,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -663,11 +678,11 @@
       "id": 2,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -701,12 +716,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 52,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -751,11 +767,11 @@
       "id": 5,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -779,6 +795,10 @@
     {
       "collapsed": false,
       "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -802,12 +822,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 51,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -852,11 +873,11 @@
       "id": 13,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -889,12 +910,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 49,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -939,11 +961,11 @@
       "id": 14,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -967,6 +989,10 @@
     {
       "collapsed": false,
       "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -990,12 +1016,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 49,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -1040,11 +1067,11 @@
       "id": 17,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -1077,12 +1104,13 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 52,
+            "gradientMode": "opacity",
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "linear",
             "lineWidth": 1,
@@ -1127,11 +1155,11 @@
       "id": 18,
       "options": {
         "legend": {
-          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "calcs": ["mean", "lastNotNull"],
           "displayMode": "table",
           "placement": "bottom"
         },
-        "tooltipOptions": {
+        "tooltip": {
           "mode": "single"
         }
       },
@@ -1154,7 +1182,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 29,
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {

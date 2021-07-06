@@ -1,12 +1,13 @@
 # Change Log
 
-## 1.5.0 (IN PROGRESS)
+## 1.5.0 (2021-07-06)
 
 ### Features / Enhancements
 
 - Added new dashboard with Redis Explorer panels for Grafana v8
-- Plugins statistics updated to May, 28 2021
+- Plugins statistics updated to July, 6 2021
 - Update README with screenshots
+- Based on Grafana 8.0
 
 ## 1.4.0 (2021-05-11)
 
@@ -21,7 +22,7 @@
 ### Features / Enhancements
 
 - Based on Grafana 7.5.1
-- Installing Redis Application plug-in with Auto provisioning
+- Installing Redis Application plugin with Auto provisioning
 - Dashboard exported as Global to support Auto provisioning
 - Plugins statistics updated to Apr, 3 2021
 
