@@ -37,21 +37,210 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1625587678005,
+  "iteration": 1625590345885,
   "links": [],
   "panels": [
     {
       "collapsed": false,
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
         "y": 0
+      },
+      "id": 39,
+      "panels": [],
+      "title": "Volkov Labs",
+      "type": "row"
+    },
+    {
+      "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 29,
+      "options": {
+        "legend": {
+          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.0-20915pre",
+      "targets": [
+        {
+          "command": "ts.mrange",
+          "filter": "value=download type=panel plugin=volkovlabs-image-panel",
+          "legend": "plugin",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries",
+          "value": "plugin"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Base64 Image (total)",
+      "transformations": [],
+      "type": "timeseries"
+    },
+    {
+      "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "bars",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 30,
+      "options": {
+        "legend": {
+          "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.0-20915pre",
+      "targets": [
+        {
+          "command": "ts.mrange",
+          "filter": "value=diff type=panel plugin=volkovlabs-image-panel",
+          "legend": "plugin",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries",
+          "value": "plugin"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Base64 Image (hourly)",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
       },
       "id": 28,
       "panels": [],
@@ -117,9 +306,9 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 1
+        "y": 13
       },
-      "id": 29,
+      "id": 37,
       "options": {
         "legend": {
           "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
@@ -207,9 +396,9 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 1
+        "y": 13
       },
-      "id": 30,
+      "id": 40,
       "options": {
         "legend": {
           "calcs": ["mean", "lastNotNull", "max", "min", "sum"],
@@ -297,7 +486,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 24
       },
       "id": 31,
       "options": {
@@ -387,7 +576,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 24
       },
       "id": 34,
       "options": {
@@ -477,7 +666,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 23
+        "y": 35
       },
       "id": 35,
       "options": {
@@ -567,7 +756,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 23
+        "y": 35
       },
       "id": 36,
       "options": {
@@ -600,15 +789,11 @@
     {
       "collapsed": false,
       "datasource": "$redis",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 34
+        "y": 46
       },
       "id": 4,
       "panels": [],
@@ -673,7 +858,7 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 35
+        "y": 47
       },
       "id": 2,
       "options": {
@@ -762,7 +947,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 35
+        "y": 47
       },
       "id": 5,
       "options": {
@@ -795,15 +980,11 @@
     {
       "collapsed": false,
       "datasource": "$redis",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 51
+        "y": 63
       },
       "id": 12,
       "panels": [],
@@ -868,7 +1049,7 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 52
+        "y": 64
       },
       "id": 13,
       "options": {
@@ -956,7 +1137,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 52
+        "y": 64
       },
       "id": 14,
       "options": {
@@ -989,15 +1170,11 @@
     {
       "collapsed": false,
       "datasource": "$redis",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 68
+        "y": 80
       },
       "id": 16,
       "panels": [],
@@ -1062,7 +1239,7 @@
         "h": 16,
         "w": 12,
         "x": 0,
-        "y": 69
+        "y": 81
       },
       "id": 17,
       "options": {
@@ -1150,7 +1327,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 69
+        "y": 81
       },
       "id": 18,
       "options": {
@@ -1220,5 +1397,5 @@
   "timezone": "",
   "title": "Grafana Plugins v8",
   "uid": "C1NCSr3Gk",
-  "version": 1
+  "version": 2
 }
