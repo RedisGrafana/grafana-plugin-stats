@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.0.0 (2021-10-10)
+
+### Features / Enhancements
+
+- Plugins statistics updated to October, 10 2021
+- Based on Grafana 8.2
+
 ## 1.5.0 (2021-07-06)
 
 ### Features / Enhancements
