@@ -1,11 +1,12 @@
 # Change Log
 
-## 2.0.0 (2021-10-10)
+## 2.0.0 (2021-10-11)
 
 ### Features / Enhancements
 
 - Plugins statistics updated to October, 10 2021
-- Based on Grafana 8.2
+- Update screenshots and dashboards for Grafana 8.2
+- Added demo on https://demo.volkovlabs.io
 
 ## 1.5.0 (2021-07-06)
 
