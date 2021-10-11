@@ -14,6 +14,13 @@ This project collects plugins statistics from Grafana repository as [RedisTimeSe
 
 Read the full story on Redis Labs blog [How to Use the New Redis Data Source for Grafana Plugin](https://redis.com/blog/how-to-use-the-new-redis-data-source-for-grafana-plug-in/).
 
+## Demo
+
+Demo is available on [demo.volkovlabs.io](https://demo.volkovlabs.io):
+
+- [Redis Overview dashboard](https://demo.volkovlabs.io/d/TgibHBv7z/redis-overview?orgId=1&refresh=1h)
+- [Grafana Plugins dashboard](https://demo.volkovlabs.io/d/C1NCSr3Gk/grafana-plugins?orgId=1)
+
 ## Requirements
 
 - [Docker](https://docker.com) to start Redis and Grafana.

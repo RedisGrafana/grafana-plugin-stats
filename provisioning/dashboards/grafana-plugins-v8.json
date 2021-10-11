@@ -44,7 +44,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1633881264974,
+  "iteration": 1633968644648,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -238,7 +238,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redis Data Source (hourly)",
+      "title": "Redis plugins (hourly)",
       "type": "timeseries"
     },
     {
@@ -1031,5 +1031,5 @@
   "timezone": "",
   "title": "Grafana Plugins",
   "uid": "C1NCSr3Gk",
-  "version": 1
+  "version": 2
 }
