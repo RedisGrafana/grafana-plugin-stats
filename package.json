@@ -1,12 +1,12 @@
 {
   "author": "Mikhail Volkov",
   "dependencies": {
-    "axios": "^0.21.1",
-    "ioredis": "^4.27.6"
+    "axios": "^0.22.0",
+    "ioredis": "^4.27.10"
   },
   "description": "How many times Redis Data Source for Grafana was downloaded?",
   "devDependencies": {
-    "@types/node": "^16.0.0"
+    "@types/node": "^16.10.3"
   },
   "license": "Apache-2.0",
   "name": "grafana-plugin-stats",
@@ -20,5 +20,5 @@
     "stop:master": "docker-compose -f docker-compose/master.yml down",
     "upgrade": "yarn upgrade --latest"
   },
-  "version": "1.5.0"
+  "version": "2.0.0"
 }
