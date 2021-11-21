@@ -5,7 +5,7 @@
 [![Grafana 8](https://img.shields.io/badge/Grafana-8-orange)](https://www.grafana.com)
 [![Redis Data Source](https://img.shields.io/badge/dynamic/json?color=blue&label=Redis%20Data%20Source&query=%24.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-datasource)](https://grafana.com/grafana/plugins/redis-datasource)
 [![Downloaded](https://img.shields.io/badge/dynamic/json?color=blue&label=Downloads&query=%24.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fredis-datasource)](https://grafana.com/grafana/plugins/redis-datasource)
-[![Docker](https://github.com/RedisGrafana/redis-plugin-stats/actions/workflows/docker.yml/badge.svg)](https://github.com/RedisGrafana/redis-plugin-stats/actions/workflows/docker.yml)
+[![Docker](https://github.com/RedisGrafana/grafana-plugin-stats/actions/workflows/docker.yml/badge.svg)](https://github.com/RedisGrafana/grafana-plugin-stats/actions/workflows/docker.yml)
 
 ## Introduction
 
