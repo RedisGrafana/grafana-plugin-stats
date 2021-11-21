@@ -1,0 +1,339 @@
+{
+  "__inputs": [],
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "8.2.4"
+    },
+    {
+      "type": "datasource",
+      "id": "redis-datasource",
+      "name": "Redis",
+      "version": "2.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": null,
+  "iteration": 1637464097189,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": ["grafana"],
+      "targetBlank": false,
+      "title": "Grafana",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": "$redis",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto",
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Id"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 214
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Type"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 142
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Description"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 353
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "url"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 626
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Downloads"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "short"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 274
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Slug"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 243
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Updated At"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "dateTimeFromNow"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "createdAt"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "dateTimeFromNow"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 33,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "Name"
+          }
+        ]
+      },
+      "pluginVersion": "8.2.4",
+      "targets": [
+        {
+          "command": "json.get",
+          "keyName": "plugins",
+          "path": ".items",
+          "query": "",
+          "refId": "A",
+          "type": "json"
+        }
+      ],
+      "title": "Plugins",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "downloadSlug": true,
+              "featured": true,
+              "id": true,
+              "internal": true,
+              "orgId": true,
+              "orgSlug": true,
+              "orgUrl": true,
+              "popularity": true,
+              "status": true,
+              "typeCode": true,
+              "typeId": true,
+              "userId": true,
+              "verified": true,
+              "versionSignatureType": true,
+              "versionSignedByOrg": true,
+              "versionSignedByOrgName": true,
+              "versionStatus": true
+            },
+            "indexByName": {
+              "createdAt": 17,
+              "description": 6,
+              "downloadSlug": 2,
+              "downloads": 7,
+              "featured": 23,
+              "id": 12,
+              "internal": 19,
+              "name": 0,
+              "orgId": 22,
+              "orgName": 14,
+              "orgSlug": 25,
+              "orgUrl": 15,
+              "popularity": 10,
+              "signatureType": 16,
+              "slug": 1,
+              "status": 20,
+              "typeCode": 5,
+              "typeId": 21,
+              "typeName": 3,
+              "updatedAt": 18,
+              "url": 8,
+              "userId": 13,
+              "verified": 9,
+              "version": 4,
+              "versionSignatureType": 11,
+              "versionSignedByOrg": 24,
+              "versionSignedByOrgName": 27,
+              "versionStatus": 26
+            },
+            "renameByName": {
+              "createdAt": "Created At",
+              "description": "Description",
+              "downloadSlug": "",
+              "downloads": "Downloads",
+              "name": "Name",
+              "orgName": "Organization",
+              "orgUrl": "",
+              "signatureType": "Signature",
+              "slug": "Slug",
+              "status": "Status",
+              "typeCode": "",
+              "typeId": "",
+              "typeName": "Type",
+              "updatedAt": "Updated At",
+              "version": "Version"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    }
+  ],
+  "schemaVersion": 32,
+  "style": "dark",
+  "tags": ["grafana"],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "Redis-1",
+          "value": "Redis-1"
+        },
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "Redis",
+        "multi": false,
+        "name": "redis",
+        "options": [],
+        "query": "redis-datasource",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Grafana Plugins",
+  "uid": "hHK1qmpnk",
+  "version": 16
+}

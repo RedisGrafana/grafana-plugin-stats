@@ -16,6 +16,7 @@ const axios = require("axios");
  * You can also specify connection options as a redis:// URL or rediss:// URL when using TLS encryption
  */
 const redis = new Redis("redis://localhost:6379");
+const redisJson = new Redis("redis://localhost:6380");
 
 /**
  * Save plugin details
@@ -132,11 +133,15 @@ async function main() {
    * Save data
    */
   await Promise.all(data.items.map(async (plugin) => await savePlugin(plugin)));
+  await redisJson
+    .send_command("JSON.SET", "plugins", ".", JSON.stringify(data))
+    .catch((err) => console.log(err));
 
   /**
-   * Close Redis connection
+   * Close Redis connections
    */
   await redis.quit();
+  await redisJson.quit();
 }
 
 /**

@@ -31,7 +31,7 @@ Demo is available on [demo.volkovlabs.io](https://demo.volkovlabs.io):
 Collect and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redis.com/redistimeseries/).
 
 ```bash
-node src/global-stats.ts
+node src/stats.ts
 ```
 
 ## Visualize data
