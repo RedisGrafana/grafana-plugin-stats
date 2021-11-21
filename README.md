@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This project collects plugins statistics from Grafana repository as [RedisTimeSeries](https://oss.redis.com/redistimeseries/) and visualizes collected data using [Redis plugins for Grafana](https://redisgrafana.github.io/).
+This project collects plugins statistics from Grafana repository as [RedisTimeSeries](https://oss.redis.com/redistimeseries/) and [RedisJSON](https://oss.redis.com/redisjson/) and visualizes collected data using [Redis plugins for Grafana](https://redisgrafana.github.io/).
 
 ![Diagram](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-grafana-stats.png)
 
@@ -19,7 +19,8 @@ Read the full story on Redis Labs blog [How to Use the New Redis Data Source for
 Demo is available on [demo.volkovlabs.io](https://demo.volkovlabs.io):
 
 - [Redis Overview dashboard](https://demo.volkovlabs.io/d/TgibHBv7z/redis-overview?orgId=1&refresh=1h)
-- [Grafana Plugins dashboard](https://demo.volkovlabs.io/d/C1NCSr3Gk/grafana-plugins?orgId=1)
+- [Grafana Plugins dashboard](https://demo.volkovlabs.io/d/hHK1qmpnk/grafana-plugins?orgId=1)
+- [Grafana Plugins Downloads dashboard](https://demo.volkovlabs.io/d/C1NCSr3Gk/grafana-plugins?orgId=1)
 
 ## Requirements
 
@@ -31,7 +32,7 @@ Demo is available on [demo.volkovlabs.io](https://demo.volkovlabs.io):
 Collect and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redis.com/redistimeseries/).
 
 ```bash
-node src/global-stats.ts
+node src/stats.ts
 ```
 
 ## Visualize data

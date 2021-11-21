@@ -1,24 +1,23 @@
 {
-  "author": "Mikhail Volkov",
+  "author": "Volkov Labs",
   "dependencies": {
-    "axios": "^0.22.0",
-    "ioredis": "^4.27.10"
+    "axios": "^0.24.0",
+    "ioredis": "^4.28.0"
   },
   "description": "How many times Redis Data Source for Grafana was downloaded?",
   "devDependencies": {
-    "@types/node": "^16.10.3"
+    "@types/node": "^16.11.9"
   },
   "license": "Apache-2.0",
   "name": "grafana-plugin-stats",
   "scripts": {
     "redis-cli": "docker exec -it redistimeseries redis-cli",
     "start": "docker-compose pull && docker-compose up",
-    "start:app": "node src/plugin-stats.ts",
-    "start:app:global": "node src/global-stats.ts",
+    "start:app": "node src/stats.ts",
     "start:master": "docker-compose pull && docker-compose -f docker-compose/master.yml up",
     "stop": "docker-compose down",
     "stop:master": "docker-compose -f docker-compose/master.yml down",
     "upgrade": "yarn upgrade --latest"
   },
-  "version": "2.0.0"
+  "version": "2.1.0"
 }

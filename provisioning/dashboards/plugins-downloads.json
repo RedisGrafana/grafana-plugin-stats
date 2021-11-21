@@ -5,13 +5,13 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.2.0"
+      "version": "8.2.4"
     },
     {
       "type": "datasource",
       "id": "redis-datasource",
       "name": "Redis",
-      "version": "1.5.0"
+      "version": "2.0.0"
     },
     {
       "type": "panel",
@@ -44,8 +44,21 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1633968644648,
-  "links": [],
+  "iteration": 1637464151507,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": ["grafana"],
+      "targetBlank": false,
+      "title": "Grafana",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
   "liveNow": false,
   "panels": [
     {
@@ -993,9 +1006,9 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 31,
+  "schemaVersion": 32,
   "style": "dark",
-  "tags": [],
+  "tags": ["grafana"],
   "templating": {
     "list": [
       {
@@ -1029,7 +1042,7 @@
     "refresh_intervals": ["1h"]
   },
   "timezone": "",
-  "title": "Grafana Plugins",
+  "title": "Plugins Downloads",
   "uid": "C1NCSr3Gk",
   "version": 2
 }

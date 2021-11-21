@@ -9,6 +9,12 @@ services:
     volumes:
       - ./data:/data
 
+  redismod:
+    container_name: redismod
+    image: redislabs/redismod:latest
+    ports:
+      - 6380:6379
+
   grafana:
     container_name: grafana
     image: ghcr.io/redisgrafana/redis-app:latest
