@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.0 (IN PROGRESS)
+
+### Features / Enhancements
+
+- Add RedisJSON for Table output (#16)
+
 ## 2.0.0 (2021-10-11)
 
 ### Features / Enhancements

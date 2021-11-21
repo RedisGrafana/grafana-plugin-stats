@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This project collects plugins statistics from Grafana repository as [RedisTimeSeries](https://oss.redis.com/redistimeseries/) and visualizes collected data using [Redis plugins for Grafana](https://redisgrafana.github.io/).
+This project collects plugins statistics from Grafana repository as [RedisTimeSeries](https://oss.redis.com/redistimeseries/) and [RedisJSON](https://oss.redis.com/redisjson/) and visualizes collected data using [Redis plugins for Grafana](https://redisgrafana.github.io/).
 
 ![Diagram](https://raw.githubusercontent.com/RedisGrafana/grafana-plugin-stats/master/images/redis-grafana-stats.png)
 
