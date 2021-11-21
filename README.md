@@ -19,7 +19,8 @@ Read the full story on Redis Labs blog [How to Use the New Redis Data Source for
 Demo is available on [demo.volkovlabs.io](https://demo.volkovlabs.io):
 
 - [Redis Overview dashboard](https://demo.volkovlabs.io/d/TgibHBv7z/redis-overview?orgId=1&refresh=1h)
-- [Grafana Plugins dashboard](https://demo.volkovlabs.io/d/C1NCSr3Gk/grafana-plugins?orgId=1)
+- [Grafana Plugins dashboard](https://demo.volkovlabs.io/d/hHK1qmpnk/grafana-plugins?orgId=1)
+- [Grafana Plugins Downloads dashboard](https://demo.volkovlabs.io/d/C1NCSr3Gk/grafana-plugins?orgId=1)
 
 ## Requirements
 
