@@ -28,6 +28,14 @@ Demo is available on [demo.volkovlabs.io](https://demo.volkovlabs.io):
 - [Docker](https://docker.com) to start Redis and Grafana.
 - [Node.js](https://nodejs.org) to run scripts.
 
+## Redis with RedisJSON2, RedisSearch2 and RedisGraph Docker image
+
+This project provides Docker image with the latest version of Redis, RedisJSON2, RedisSearch2, RedisGraph and RedisGears modules.
+
+```bash
+docker run -p 6379:6379 --name=redis-jsg ghcr.io/redisgrafana/redis-jsg:latest
+```
+
 ## Collect statistics
 
 Collect and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redis.com/redistimeseries/).
