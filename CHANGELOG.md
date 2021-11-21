@@ -5,6 +5,7 @@
 ### Features / Enhancements
 
 - Add RedisJSON for Table output (#16)
+- Add Dockerfile to build Docker image `redis-jsg` (JSON2, Search2 and Graph)
 
 ## 2.0.0 (2021-10-11)
 

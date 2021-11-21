@@ -9,9 +9,10 @@ services:
     volumes:
       - ./data:/data
 
-  redismod:
-    container_name: redismod
-    image: redislabs/redismod:latest
+  redisjsg:
+    container_name: redisjsg
+    image: ghcr.io/redisgrafana/redis-jsg:latest
+    build: ./
     ports:
       - 6380:6379
 
