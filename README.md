@@ -38,10 +38,40 @@ docker run -p 6379:6379 --name=redis-jsg ghcr.io/redisgrafana/redis-jsg:latest
 
 ## Collect statistics
 
-Collect and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redis.com/redistimeseries/).
+Collect and store statistics for all Grafana plugins using [RedisTimeSeries](https://oss.redis.com/redistimeseries/) and RedisJSON modules.
 
 ```bash
 node src/stats.ts
+```
+
+## Create RediSearch index to search plugins
+
+RediSearch does not support JSON array, which means that JSON with all plugins should be separated to individial JSON keys and the easiest way to do it is using RedisGears.
+
+```
+import json
+
+
+def update(x):
+    """
+    Update plugins
+    """
+    j = json.loads(execute('json.get', x['key'], '.items'))
+    for i in j:
+        execute('SADD', 'set:plugins', i['slug'])
+        execute("JSON.SET", "plugin:" + i['slug'], ".", json.dumps(i))
+
+
+gb = GearsBuilder('KeysReader')
+gb.map(update)
+gb.register(prefix='plugins')
+```
+
+This RedisGears script automatically parse and updates indivial plugins keys when `plugins` key updated every hour.
+To create RediSearch schema:
+
+```
+FT.CREATE pluginIdx ON JSON SCHEMA $.name AS name TEXT $.description AS description TEXT
 ```
 
 ## Visualize data
