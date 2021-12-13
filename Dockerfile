@@ -1,6 +1,6 @@
-FROM redislabs/redisearch:latest as redisearch
-FROM redislabs/redisgraph:latest as redisgraph
-FROM redislabs/rejson:latest as rejson
+FROM redislabs/redisearch:edge as redisearch
+FROM redislabs/redisgraph:edge as redisgraph
+FROM redislabs/rejson:edge as rejson
 FROM redislabs/redisgears:edge
 
 ENV LD_LIBRARY_PATH=/usr/lib/redis/modules
